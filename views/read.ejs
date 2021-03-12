@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <style type="text/css">
+             
+      #top { width:600px; height:100px; margin-left: 250px }
+  
+      #menubar {z-index: 1; width: 1175px; margin-top: 80px; position: relative;}
+      #issue {z-index: 2; width: 330px; margin-top: 90px; left: 60px;
+         position: absolute;}
+      #cbt {z-index: 2; width: 180px; margin-top: 88px; left: 445px;
+         position: absolute;   }   
+      #trade {z-index: 2; width: 175px; margin-top: 88px; left: 670px;
+         position: absolute;   }
+      #logreg {z-index: 2; width: 220px;  margin-top: 93px; left: 920px;
+         position: absolute;   }
+      #banner {z-index: 1; position: relative;}
+      #centerad {position: fixed; top:100px; right:10px;}
+      #subbar {z-index: 1; width: 1175px; margin-top: 20px; position: relative;}
+      #plus {z-index: 2; margin-top: 28px; left: 50px; position: absolute;}
+      #chatting {z-index: 2; margin-top: 32px; left: 1000px; position: absolute; }
+      #keyword {z-index: 2; width: 50px; top: 100px; margin-top: 31px; left: 250px; position: absolute;}
+      #norway {margin-top: 10px;}
+      #bang {margin-top: 10px; margin-left: 55px;}
+  
+      footer #copyright { margin: 20px 0 0 10px; float: left; }
+      footer #SNS { margin: 10px 20px 0 30px;}
+      footer #copyright { font-family: consolas; }
+      footer #SNS a { text-decoration: none; }
+      footer { height: 70px }
+  
+      #ad_fixed { position: fixed; top: 550px; right: 30px; border: thin solid orange; padding: 5px; border-top-left-radius: 8px; border-bottom-right-radius: 8px; box-shadow: 2px 2px 20px 4px orange inset;}
+      
+  </style>
+    <style>  
+        body { background: #fff; }
+        .bluetop {
+          border-collapse: collapse;
+          border-top: 3px solid #168;
+        }  
+        .bluetop th {
+          color: #168;
+          background: #f0f6f9;
+        }
+        .bluetop th, .bluetop td {
+          padding: 10px;
+          border: 1px solid #ddd;
+        }
+        .bluetop th:first-child, .bluetop td:first-child {
+          border-left: 0;
+        }
+        .bluetop th:last-child, .bluetop td:last-child {
+          border-right: 0;
+        }
+        </style>
+        
+        <link rel="stylesheet" href="css/bootstrap.css">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
+  <head>
+      <img style="top:350px;" id="ad_fixed" src="../images/ad.png"> 
+      <header id="top">
+         <a href="/"><img src="../images/logo.png"></a>
+      </header>
+      
+      
+      <nav id="menu">
+         <img id="menubar" src="../images/menubar.png">
+         <a href=""><img id="issue" src="../images/IT이슈.png"></a>
+         <a href="problem"><img id="cbt" src="../images/기출문제.png"></a>
+         <a href="list"><img id="trade" src="../images/중고거래.png"></a>
+         <a href="login"><img id="logreg" src="../images/logreg.png"></a>
+      </nav>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <table class="bluetop">
+        <% data.forEach(function (item, index) { %>
+        <tr ><th style="width:50px">번호</th><th style="width:100px">글쓴이</th><th style="width:1000px">제목</th></tr>
+        <tr><td name="PostNo"><%=item.PostNo%></td><td><%=item.Id%></td><td name="Title" ><%=item.Title%></td></tr>
+        <tr><td colspan="5"><textarea readonly name="content" maxlength="2048"  style="width:1200px; height:500px ; resize: none"><%=item.content%></textarea><tr><td colspan="6">
+            <a href="/list"> 목록 </a>
+            <% if(item.Id == msg) { %>
+            <a href="/edit?PostNo=<%=item.PostNo%>">수정</a>  
+            <a href="/delete/<%=item.PostNo%>">삭제</a>
+            <%  } %>
+          </td></tr>
+          <% }); %>
+          <form method="POST" action="/comment/<%=data[0].PostNo%>">
+
+            <% if(msg){ %>
+              <tr>
+                <td><input type="text" class="form-control" placeholder="댓글작성" name="Title" style="width: 1000px;" maxlength="500px"></td>
+                <td><input type="submit" class="btn btn-primary pull-right" value="작성"></td>
+              </tr>
+                <% }else{ %>
+              <a style="top: 280px; position: absolute; left: 50px" href="/login" style="left: 50%">글쓰기</a>   
+                <% } %>
+        </form>
+      </table>
+      <table class="bluetop">
+        <tr>
+          <th>
+            번호
+          </th>
+          <th style="width:1170px">
+            내용 
+          </th>
+        </tr>
+        <% data1.forEach(function(item,index){ %>
+          <tr>
+            <td>
+              <%= index+1 %> 
+            </td>
+            <td>
+              <%= item.com %>
+            </td>
+          </tr>
+        <% }) %>
+      </table>
+  </body>
+  
+<article>
+    <img id="centerad" src="../images/notice2.png">
+</article> 
+<aside>
+<img id="subbar" src="../images/menubar.png">
+<img style="left:80px;" id="plus" src="../images/부가기능.png">
+<a href=""><img id="chatting" src="../images/채팅하기.png"></a>
+<!-- <a href=""><img id="keyword" src="images/관심키워드등록.png"></a> -->
+<br/>
+<br/>
+<img src="../images/line.png">
+</aside>
+<footer>
+<div id="copyright" >
+Copyright (c) 2017 MY OWN WWW(LSH) Inc. All rights reserved
+</div>
+<br/><br/>
+<div id="SNS">
+   <a href="http://facebook.com" > 
+   <img src="../images/facebook.png" height="32" alt="Facebook">
+   </a>
+   <a href="http://twitter.com" > 
+   <img src="../images/twitter.png" height="32" alt="Twitter">
+   </a>
+   <a href="http://plus.google.com" > 
+   <img src="../images/googleplus-icon.png" height="32" alt="Google Plus">
+   </a>
+   <br/><br/><br/>
+</div>
+</footer>
+  
+</html>
+

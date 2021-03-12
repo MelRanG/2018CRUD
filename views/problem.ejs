@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Board test</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+             
+
+
+  #top { width:600px; height:100px; margin-left: 250px }
+
+  #menubar {z-index: 1; width: 1175px; margin-top: 80px; position: relative;}
+  #issue {z-index: 2; width: 330px; margin-top: 90px; left: 60px;
+     position: absolute;}
+  #cbt {z-index: 2; width: 180px; margin-top: 88px; left: 445px;
+     position: absolute;   }   
+  #trade {z-index: 2; width: 175px; margin-top: 88px; left: 670px;
+     position: absolute;   }
+  #logreg {z-index: 2; width: 220px;  margin-top: 93px; left: 920px;
+     position: absolute;   }
+  #banner {z-index: 1; position: relative;}
+  #centerad {position: fixed; top:300px; right:10px;}
+  #subbar {z-index: 1; width: 1175px; margin-top: 20px; position: relative;}
+  #plus {z-index: 2; margin-top: 28px; left: 50px; position: absolute;}
+  #chatting {z-index: 2; margin-top: 32px; left: 1000px; position: absolute; }
+  #keyword {z-index: 2; width: 50px; top: 100px; margin-top: 31px; left: 250px; position: absolute;}
+  #norway {margin-top: 10px;}
+  #bang {margin-top: 10px; margin-left: 55px;}
+
+  footer #copyright { margin: 20px 0 0 10px; float: left; }
+  footer #SNS { margin: 10px 20px 0 30px;}
+  footer #copyright { font-family: consolas; }
+  footer #SNS a { text-decoration: none; }
+  footer { height: 70px }
+
+  #ad_fixed { position: fixed; top: 550px; right: 30px; border: thin solid orange; padding: 5px; border-top-left-radius: 8px; border-bottom-right-radius: 8px; box-shadow: 2px 2px 20px 4px orange inset;}
+  
+</style>
+</head>
+
+<body>
+    <% include ./Headmenu %>
+    <article>
+  <div class="container">
+  <h1>기출문제 목록</h1>
+  
+  <table style="position: absolute;  right: 350px;  width: 1100px;"  class="table table-striped">
+    <thead>
+      <th>번호</th>
+      <th>종류</th>
+      <th>이름</th>
+      <th>작성일</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>정보처리기사</td>
+         <td><a href="test1">2017년 05월 정보처리기사 필기시험</a></td>
+         <td>20181211</a></td>
+      </tr>
+
+      <tr>
+         <td>2</td>
+         <td>정보처리기사</td>
+         <td><a href="test2">2017년 07월 정보처리기사 필기시험</a></td>
+            <td>20181211</a></td>
+          </tr>
+          <tr>
+               <td>3</td>
+               <td>정보처리기사</td>
+               <td><a href="test3">2017년 09월 정보처리기사 필기시험</a></td>
+                  <td>20181211</a></td>
+                </tr>
+        
+                <tr>
+                     <td>4</td>
+                     <td>정보처리기사</td>
+                     <td><a href="test4">2017년 11월 정보처리기사 필기시험</a></td>
+                        <td>20181211</a></td>
+                      </tr>
+                      <tr>
+                           <td>5</td>
+                           <td>정보처리기사</td>
+                           <td><a href="test5">2018년 03월 정보처리기사 필기시험</a></td>
+                              <td>20181212</a></td>
+                            </tr>
+                            <tr>
+                                 <td>6</td>
+                                 <td>정보처리기사</td>
+                                 <td><a href="test6">2018년 05월 정보처리기사 필기시험</a></td>
+                                    <td>20181212</a></td>
+                                  </tr>
+                                  <tr>
+                                       <td>7</td>
+                                       <td>정보처리기사</td>
+                                       <td><a href="test7">2018년 07월 정보처리기사 필기시험</a></td>
+                                          <td>20181212</a></td>
+                                        </tr>
+                                        <tr>
+                                             <td>8</td>
+                                             <td>정보처리기사</td>
+                                             <td><a href="test8">2018년 09월 정보처리기사 필기시험</a></td>
+                                                <td>20181212</a></td>
+                                              </tr>
+    
+    </tbody>
+  </table>
+  
+  <!-- <% if(msg){ %>
+    <a style="top: 280px; position: absolute; left: 50px" href="/insert">글쓰기</a>
+      <% }else{ %>
+    <a style="top: 280px; position: absolute; left: 50px" href="/login" style="left: 50%">글쓰기</a>   
+      <% } %> -->
+  </div>
+ 
+  <br>
+  <br>
+
+  <div class="container">
+     <ul class="pager">
+      </article>
+      <article>
+          <img style="top:100px;" id="centerad" src="images/notice2.png">
+       </article> 
+</body>
+<footer style="top:700px; position: absolute" >
+    <div id="copyright" >
+    Copyright (c) 2017 MY OWN WWW(LSH) Inc. All rights reserved
+    </div>
+    <br/><br/>
+    <div id="SNS">
+       <a href="http://facebook.com" > 
+       <img src="images/facebook.png" height="32" alt="Facebook">
+       </a>
+       <a href="http://twitter.com" > 
+       <img src="images/twitter.png" height="32" alt="Twitter">
+       </a>
+       <a href="http://plus.google.com" > 
+       <img src="images/googleplus-icon.png" height="32" alt="Google Plus">
+       </a>
+       <br/><br/><br/>
+    </div>
+    </footer>
+</html>

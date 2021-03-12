@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+   <html>
+      <head>
+         <title>IT 안심 중고거래 매칭 커뮤니티</title>
+         <style type="text/css">
+             
+             #top { width:600px; height:100px; margin-left: 250px }
+
+#menubar {z-index: 1; width: 1175px; margin-top: 80px; position: relative;}
+#issue {z-index: 2; width: 330px; margin-top: 90px; left: 60px;
+   position: absolute;}
+#cbt {z-index: 2; width: 180px; margin-top: 88px; left: 445px;
+   position: absolute;   }   
+#trade {z-index: 2; width: 175px; margin-top: 88px; left: 670px;
+   position: absolute;   }
+#logreg {z-index: 2; width: 220px;  margin-top: 93px; left: 920px;
+   position: absolute;   }
+#banner {z-index: 1; position: relative;}
+#centerad {position: fixed; top:100px; right:10px;}
+#subbar {z-index: 1; width: 1175px; margin-top: 20px; position: relative;}
+#plus {z-index: 2; margin-top: 28px; left: 50px; position: absolute;}
+#chatting {z-index: 2; margin-top: 32px; left: 1000px; position: absolute; }
+#keyword {z-index: 2; width: 50px; top: 100px; margin-top: 31px; left: 250px; position: absolute;}
+#norway {margin-top: 10px;}
+#bang {margin-top: 10px; margin-left: 55px;}
+
+footer #copyright { margin: 20px 0 0 10px; float: left; }
+footer #SNS { margin: 10px 20px 0 30px;}
+footer #copyright { font-family: consolas; }
+footer #SNS a { text-decoration: none; }
+footer { height: 70px }
+
+#ad_fixed { position: fixed; top: 350px; right: 30px; border: thin solid orange; padding: 5px; border-top-left-radius: 8px; border-bottom-right-radius: 8px; box-shadow: 2px 2px 20px 4px orange inset;}
+             
+         </style>
+
+      </head>
+
+      <body>
+            <article>
+               <img id="centerad" src="images/notice2.png">
+            </article>
+
+     
+
+            <img id="ad_fixed" src="images/ad.png">
+            <header id="top">
+               <a href="/"><img src="images/logo.png"></a>
+            </header>
+         
+
+            <nav>
+               <img id="menubar" src="images/menubar.png">
+               <a href=""><img id="issue" src="images/IT이슈.png"></a>
+               <a href=""><img id="cbt" src="images/기출문제.png"></a>
+               <a href="list"><img id="trade" src="images/중고거래.png"></a>
+               <a href="login"><img id="logreg" src="images/logreg.png"></a>
+               
+            </nav><br/>
+
+            <form method="POST" action="/signup">
+               <fieldset  style="width:1000px;" id="field_control">
+                  <legend>회원가입</legend>
+                  <span>사용자아이디</span>
+                  <input type="text" name="id"/>
+                  <span>비밀번호</span>
+                  <input type="password" name="password"><br/>
+                  <span>비밀번호 확인</span>
+                  <input type="password" name="password2"><br/>
+                  <span>이름</span>
+                  <input type="text" name="name"><br/>
+                  <span>전화번호</span>
+                  <input type="tel" name="telNum"><br/>
+                  <span>이메일</span>
+                  <input type="email" name="email"><br/>
+                  <br/>
+                  
+                  간단한 자기소개<br/>
+                  <textarea cols="30" rows="5">간단한 자기소개를 써 주세요.</textarea>
+                  </fieldset>
+                  <input type="submit" value="회원가입">
+                  <input type="button" value="취소" abled/><br/>
+               <img src="images/line.png">
+            </form>
+
+            <footer>
+               <div id="copyright" >
+               Copyright (c) 2017 MY OWN WWW(LSH) Inc. All rights reserved
+               </div>
+               <br/><br/>
+               <div id="SNS">
+                  <a href="http://facebook.com" > 
+                  <img src="images/facebook.png" height="32" alt="Facebook">
+                  </a>
+                  <a href="http://twitter.com" > 
+                  <img src="images/twitter.png" height="32" alt="Twitter">
+                  </a>
+                  <a href="http://plus.google.com" > 
+                  <img src="images/googleplus-icon.png" height="32" alt="Google Plus">
+                  </a>
+                  <br/><br/><br/>
+               </div>
+            </footer>

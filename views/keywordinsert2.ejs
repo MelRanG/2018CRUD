@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <style type="text/css">
+             
+    #top { width:600px; height:100px; margin-left: 250px }
+
+    #menubar {z-index: 1; width: 1175px; margin-top: 80px; position: relative;}
+    #issue {z-index: 2; width: 330px; margin-top: 90px; left: 60px;
+       position: absolute;}
+    #cbt {z-index: 2; width: 180px; margin-top: 88px; left: 445px;
+       position: absolute;   }   
+    #trade {z-index: 2; width: 175px; margin-top: 88px; left: 670px;
+       position: absolute;   }
+    #logreg {z-index: 2; width: 220px;  margin-top: 93px; left: 920px;
+       position: absolute;   }
+    #banner {z-index: 1; position: relative;}
+    #centerad {position: fixed; margin-top: 0px; left: 1620px;}
+    #subbar {z-index: 1; width: 1175px; margin-top: 20px; position: relative;}
+    #plus {z-index: 2; margin-top: 28px; left: 50px; position: absolute;}
+    #chatting {z-index: 2; margin-top: 32px; left: 1000px; position: absolute; }
+    #keyword {z-index: 2; width: 50px; top: 100px; margin-top: 31px; left: 250px; position: absolute;}
+    #norway {margin-top: 10px;}
+    #bang {margin-top: 10px; margin-left: 55px;}
+
+    footer #copyright { margin: 20px 0 0 10px; float: left; }
+    footer #SNS { margin: 10px 20px 0 30px;}
+    footer #copyright { font-family: consolas; }
+    footer #SNS a { text-decoration: none; }
+    footer { height: 70px }
+
+    #ad_fixed { position: fixed; top: 550px; right: 30px; border: thin solid orange; padding: 5px; border-top-left-radius: 8px; border-bottom-right-radius: 8px; box-shadow: 2px 2px 20px 4px orange inset;}
+    
+</style>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+
+  <link rel="stylesheet" href="css/bootstrap.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title>글쓰기</title>
+</head>
+
+<body>
+       
+        <header id="top">
+           <a href="/"><img src="images/logo.png"></a>
+        </header>
+        
+        
+        <nav id="menu">
+           <img id="menubar" src="images/menubar.png">
+           <a href=""><img id="issue" src="images/IT이슈.png"></a>
+           <a href=""><img id="cbt" src="images/기출문제.png"></a>
+           <a href="list"><img id="trade" src="images/중고거래.png"></a>
+           <a href="login"><img id="logreg" src="images/logreg.png"></a>
+        </nav>
+  <article>
+  <h1>관심 키워드 등록</h1>
+  <hr />
+  <form method="post" action="/keywordinsert2">
+    <fieldset></fieldset>
+      <div class="container">
+
+        <div class="row">
+
+          <form method="post" action="writeAction.jsp">
+
+            <table class="table table-striped" style=" position: absolute; right: 400px; width: 1000px; text-align:center; border:1px; solid #dddddd">
+
+              <thead>
+                <tr>
+                  <th colspan="1" style="background-color:#eeeeee; text-align: center;">키워드 등록 양식</th>
+                </tr>
+              </thead>
+         <tbody>
+                <tr>
+                        <td><textarea name="keyword1" id="" cols="150" rows="1"><%= data[0].keyword1 %></textarea><a href="keyword1">검색</a></td>
+                </tr>
+                <tr>
+                        <td><textarea name="keyword2" id="" cols="150" rows="1"><%= data[0].keyword2 %></textarea><a href="keyword2">검색</a></td>
+                </tr>
+                <tr>
+                        <td><textarea name="keyword3" id="" cols="150" rows="1"><%= data[0].keyword3 %></textarea><a href="keyword3">검색</a></td>
+                </tr>
+                <tr>
+                        <td><textarea name="keyword4" id="" cols="150" rows="1"><%= data[0].keyword4 %></textarea><a href="keyword4">검색</a></td>
+                </tr>
+                <tr>
+                        <td><textarea name="keyword5" id="" cols="150" rows="1"><%= data[0].keyword5 %></textarea><a href="keyword5">검색</a></td>
+                </tr>
+
+        </tbody>
+            </table>
+            <input type="submit" style=" position: absolute; right: 730px; top:300px;"  class="btn btn-primary pull-right" value="저장">
+           
+          </form>
+        </div>
+      </div>
+    </fieldset>
+
+  </form>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script src="js/bootstrap.min.js"></script>
+  <button  style=" position: absolute; right: 675px; top: 305px;" onclick="location.href='/'">취소</button>
+</body>
+<footer style="top:700px; position: absolute" >
+<div id="copyright" >
+Copyright (c) 2017 MY OWN WWW(LSH) Inc. All rights reserved
+</div>
+<br/><br/>
+<div id="SNS">
+ <a href="http://facebook.com" > 
+ <img src="images/facebook.png" height="32" alt="Facebook">
+ </a>
+ <a href="http://twitter.com" > 
+ <img src="images/twitter.png" height="32" alt="Twitter">
+ </a>
+ <a href="http://plus.google.com" > 
+ <img src="images/googleplus-icon.png" height="32" alt="Google Plus">
+ </a>
+ <br/><br/><br/>
+</div>
+</footer>
+
+</html>

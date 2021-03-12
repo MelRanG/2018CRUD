@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <style type="text/css">
+             
+    #top { width:600px; height:100px; margin-left: 250px }
+
+    #menubar {z-index: 1; width: 1175px; margin-top: 80px; position: relative;}
+    #issue {z-index: 2; width: 330px; margin-top: 90px; left: 60px;
+       position: absolute;}
+    #cbt {z-index: 2; width: 180px; margin-top: 88px; left: 445px;
+       position: absolute;   }   
+    #trade {z-index: 2; width: 175px; margin-top: 88px; left: 670px;
+       position: absolute;   }
+    #logreg {z-index: 2; width: 220px;  margin-top: 93px; left: 920px;
+       position: absolute;   }
+    #banner {z-index: 1; position: relative;}
+    #centerad {position: fixed; top:100px; right:10px;}
+    #subbar {z-index: 1; width: 1175px; margin-top: 20px; position: relative;}
+    #plus {z-index: 2; margin-top: 28px; left: 50px; position: absolute;}
+    #chatting {z-index: 2; margin-top: 32px; left: 1000px; position: absolute; }
+    #keyword {z-index: 2; width: 50px; top: 100px; margin-top: 31px; left: 250px; position: absolute;}
+    #norway {margin-top: 10px;}
+    #bang {margin-top: 10px; margin-left: 55px;}
+
+    footer #copyright { margin: 20px 0 0 10px; float: left; }
+    footer #SNS { margin: 10px 20px 0 30px;}
+    footer #copyright { font-family: consolas; }
+    footer #SNS a { text-decoration: none; }
+    footer { height: 70px }
+
+    #ad_fixed { position: fixed; top: 550px; right: 30px; border: thin solid orange; padding: 5px; border-top-left-radius: 8px; border-bottom-right-radius: 8px; box-shadow: 2px 2px 20px 4px orange inset;}
+    
+</style>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+
+  <link rel="stylesheet" href="css/bootstrap.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title>글쓰기</title>
+</head>
+
+<body>
+  <img style="top:350px;" id="ad_fixed" src="images/ad.png"> 
+<header id="top">
+   <a href="/"><img src="images/logo.png"></a>
+</header>
+
+
+<nav id="menu">
+   <img id="menubar" src="images/menubar.png">
+   <a href=""><img id="issue" src="images/IT이슈.png"></a>
+   <a href=""><img id="cbt" src="images/기출문제.png"></a>
+   <a href="list"><img id="trade" src="images/중고거래.png"></a>
+   <a href="login"><img id="logreg" src="images/logreg.png"></a>
+</nav>
+  <article>
+  <h1>기출문제</h1>
+  <hr />
+  <form method="post" action="/test1">
+    <fieldset></fieldset>
+      <div class="container">
+        <div class="row">
+          <form method="post" action="writeAction.jsp">
+            <table class="table table-striped" style=" position: absolute; right: 450px; width: 1000px; text-align:center; border:1px; solid #dddddd">
+              <thead>
+                <tr>
+                  <th colspan="1" style="background-color:#eeeeee; text-align: center;">기출문제</th>
+                </tr>
+              </thead>
+         <tbody>
+                <tr>
+                  <td><input readonly type="text" class="form-control" value="2017년 05월 정보처리기사" name="Title" maxlength="50"></td>
+                </tr>
+                <tr>
+                  <td><textarea readonly class="form-control" placeholder="" name="content" maxlength="2048" style="height:350px">
+                        1과목 : 데이터 베이스
+                        
+                        1. 다음 자료에 대하여 삽입(insertion) 정렬 기법을 사용하여 오름차순으로 정렬하고자 한다. 1회전 후의 결과는?
+                           
+                           ① 4, 3, 2, 1, 5	② 3, 4, 5, 2, 1
+                           ③ 4, 5, 3, 2, 1	④ 1, 2, 3, 4, 5
+                        2. What is the quantity of tuples in consist of the relation?
+                           ① Degree		② Instance
+                           ③ Domain		④ Cardinality
+                        3. 병행제어 기법 중 로킹(Locking) 기법에 대한 설명으로 옳지 않은 것은?
+                           ① 로킹의 대상이 되는 객체의 크기를 로킹 단위라고 한다.
+                           ② 로킹 단위가 작아지면 병행성 수준이 높아진다.
+                           ③ 로킹 단위가 커지면 로킹 오버헤드가 증가한다.
+                           ④ 데이터베이스도 로킹 단위가 될 수 있다.
+                        4. 데이터베이스 설계 순서로 옳은 것은?
+                           ① 요구 조건 분석 → 개념적 설계 → 논리적 설계 → 물리적 설계 → 구현
+                           ② 요구 조건 분석 → 논리적 설계 → 개념적 설계 → 물리적 설계 → 구현
+                           ③ 요구 조건 분석 → 논리적 설계 → 물리적 설계 → 개념적 설계 → 구현
+                           ④ 요구 조건 분석 → 개념적 설계 → 물리적 설계 → 논리적 설계 → 구현
+                        5. 어떤 릴레이션 R에서 X와 Y를 각각 R의 애트리뷰트 집합의 부분 집홥이라고 할 경우 애트리뷰트 X의 값 각각에 대해 시간에 관계없이 항상 애트리뷰트 Y의 값이 오직 하나만 연관되어 있을 때 Y는 X에 함수종속이라고 한다. 이 함수 종속의 표기로 옳은 것은?
+                           ① X → X		② Y ⊂ X
+                           ③ X → Y		④ X ⊂ Y
+                        6. 데이터베이스의 특성으로 옳지 않은 것은?
+                           ① 실시간 접근성	② 동시 공용
+                           ③ 계속적인 변화	④ 주소에 의한 참조
+                        7. 데이터 모델의 구성 요소 중 데이터베이스에 표현된 개체 인스턴스를 처리하는 작업에 해단 명세로서 데이터베이스를 조작하는 기본 도구에 해당하는 것은?
+                           ① Operation		② Constraint
+                           ③ Structure		④ Relationship
+                        8. DBMS의 필수 기능 중 모든 응용프로그램들이 요구하는 데이터 구조를 지원하기 위해 데이터 베이스에 저장될 데이터의 타입과 구조에 대한 정의, 이용방식, 제약조건 등을 명시하는 것은?
+                           ① Manipulation 기능		② Definition 기능
+                           ③ Control 기능		④ Procedure 기능
+                        9. 다음 트리의 중위 순회 결과는?
+                           
+                           ① A B D C E F	② D B A E C F
+                           ③ A B C D E F	④ D B E F C A
+                        10. 시스템 카탈로그에 대한 설명으로 옳지 않은 것은?
+                            ① 시스템 카탈로그는 DBMS가 스스로 생성하고 유지하는 데이터베이스 내의 특별한 테이블들의 집합체이다.
+                            ② 일반 사용자도 SQL을 이용하여 시스템 카탈로그를 직접 갱신할 수 있다.
+                            ③ 데이터베이스 구조가 변경될 때마다 DBMS는 자동적으로 시스템 카탈로그 테이블의 행을 삽입, 삭제, 수정한다.
+                            ④ 시스템 카탈로그는 데이터베이스 구조에 대한 메타 데이터를 포함한다.
+                        11. 병행제어의 목적으로 옳지 않은 것은?
+                            ① 시스템 활용도 최대화
+                            ② 사용자에 대한 응답시간 최소화
+                            ③ 데이터베이스 공유 최소화
+                            ④ 데이터베이스 일관성 유지
+                        12. 정규화에 관한 설명으로 옳지 않은 것은?
+                            ① 릴레이션 R의 도메인의 값이 원자 값만을 가지면 릴레이션 R은 제1정규형에 해당된다.
+                            ② 정규화는 차수가 높을수록(제1정규형→제5정규형) 만족시켜야 할 제약조건이 많아진다.
+                            ③ 릴레이션 R이 제1정규형을 만족하면서, 키가 아닌 모든 속성이 기본 키에 완전 함수 종속이면 릴레이션 R은 제2정규형에 해당된다.
+                            ④ 릴레이션 R이 제2정규형을 만족하고, 결정자 이면서 후보 키가 아닌 것을 제거하면 제3정규형에 해당된다.
+                        13. 릴레이션의 특징으로 옳은 내용 모두를 나열한 것은?
+                            
+                            ① ㄷ, ㄹ		② ㄴ, ㄷ, ㄹ
+                            ③ ㄱ, ㄴ, ㄹ		④ ㄱ, ㄴ, ㄷ, ㄹ
+                        14. 다음 설명에 해당하는 스키마는?
+                            
+                            ① conceptual schema		② internal schema
+                            ③ external schema		④ definition schema
+                        15. 관계해석에 대한 설명으로 옳지 않은 것은?
+                            ① 수학의 프레디킷 해석에 기반들 두고 있다.
+                            ② 관계 데이터 모델의 제안자인 코드(Codd)가 관게 데이터베이스에 적용할 수 있도록 설계하여 제안하였다.
+                            ③ 튜플 관계해석과 도메인 관련해석이 있다.
+                            ④ 원하는 정보와 그 정보를 어떻게 유도하는가를 기술하는 절차적 특성을 가진다.
+                        16. 순서가 A, B, C, D로 정해진 입력 자료를 스택에 입력하였다가 출력할 때, 가능한 출력 순거의 결과가 아닌 것은?
+                            ① D, A, B, C		② A, B, C., D
+                            ③ A, B, D, C		④ B, C, D, A
+                        17. 다음은 무엇에 대한 설명인가?
+                            
+                            ① Super Key		② Foreign Key
+                            ③ Alternative key	④ Candidate Key
+                        18. 뷰에 대한 설명으로 옳지 않은 것은?
+                            ① 뷰는 삽입, 삭제, 갱신 연산에 제약사항이 따른다.
+                            ② 뷰는 데이터 접근 제어로 보안을 제공한다.
+                            ③ 뷰는 물리적으로 구현되는 테이블이다.
+                            ④ 뷰는 데이터의 논리적 독립성을 제공한다.
+                        19. 트랜잭션의 특징 중 트랜잭션이 일단 완료되면 구 후에 어떤 형태로 시스템이 고장 나더라도 트랜잭션의 결과는 잃어버리지 않고 지속되는 것은?
+                            ① Isolation		② Durability
+                            ③ Consistency	④ Atomicity
+                        20. 파일조직 기법 중 순차파일에 대한 설명으로 옳지 않은 것은?
+                            ① 파일 탐색시 효율이 우수하며, 대화형 처리에 적합하다.
+                            ② 레코드가 키 순서대로 편성되어 취급이 용이다.
+                            ③ 연속적인 레코드의 저장에 의해 레코드 사이에 빈 공간이 존재하지 않으므로 기억장치의 효율적인 이용이 가능하다.
+                            ④ 필요한 레코드를 삽입, 삭제, 수정하는 경우 파일의 재구성해야 하므로 파일 전체를 복사해야 한다.
+                        
+                        
+                        2과목 : 전자 계산기 구조
+                        
+                        21. 블루레이 디스크(Blue-ray Disc)에 관한 설명으로 틀린 것은?
+                            ① 저장된 데이터를 읽기 위해 적색 레이져(650nm)를 사용한다.
+                            ② 비디오 포맷은 DVD와 동일한 MPEG-2 기반 코덱이 사용된다.
+                            ③ 단층 기록면을 가지고 12cm 직경에 25GB의 데이터를 저장할 수 있다.
+                            ④ 기술 규격으로 BC-ROM(읽기전용), DB-R(기록가능), BD-RE(재기록가능)가 있다.
+                        22. 소프트웨어에 의하여 인터럽트의 우선순위를 판별하는 방법은?
+                            ① 인터럽트 벡터	② 데이지 체인
+                            ③ 폴링		④ 핸드세이킹
+                        23. 모든 명령(Instruction) 수행시 유효 주소를 구하기 위한 메이저 상태를 무엇이라 하는가?
+                            ① FETCH		② EXECUTE
+                            ③ INDIRECT		④ INTERRUPT
+                        24. 기억장치의 계층 구조 상 접근 속도가 가장 빠른 것은?
+                            ① Static RAM		② Register
+                            ③ Dynamic Ram	④ SSD
+                        25. 부동 소수점 파이프라인의 비교기, 시프터, 가산-감산기, 인크리멘터/디크리멘터가 모두 조합 회로로 구성될 때 네 세그먼트의 시간 지연이 t1=60ns, t2=70ns, t3= 100ns, t4=80n이고, 중간 레지스터의 지연이 tr=10ns라고 가정하면 클록 사이클은 얼마로 결정되어야 하는가?
+                            ① 70ns		② 110ns
+                            ③ 310ns		④ 320ns
+                        26. 오퍼레이터(operator)나 타이머(timer)에 의해 의도적으로 프로그램이 중단된 경우 발생하는 인터럽트(interrupt)는?
+                            ① 기계착오		② 입출력
+                            ③ 외부		④ 프로그램 검사
+                        27. 하드웨어 특성상 주기억장치가 제공할 수 있는 정보 전달의 능력 한계를 무엇이라 하는가?
+                            ① 주기억장치 대역폭		② 주기억장치 접근률
+                            ③ 주기억장치 지연율		④ 주기억장치 사용률
+                        28. 하드와이어 방식의 제어장치에 관한설명으로 틀린 것은?
+                            ① 제어신호의 생성과정에서 지연이 매우 작다.
+                            ② 구현되는 논리회로는 명령코드에 따라 매우 간단하다.
+                            ③ 회로가 주소지정 모드에 따라 매우 복잡하다.
+                            ④ 소프트웨어 없이 하드웨어만으로 설계된 제어장치이다.
+                        29. 여러 대의 상호 독립적인 동작이 가능한 컴퓨터들이 연결된 전체 컴퓨터들의 집합으로 전체 컴퓨터들이 상호 연결되어 협력하면서 하나의 컴퓨팅 자원인 것처럼 동작하는 것은?
+                            ① Symmetric Multiprocessor
+                            ② Nonuniform Memory Access
+                            ③ Cluster
+                            ④ Vector Processor
+                        30. 직접메모리엑세스(DMA)장치에 내장된 레지스터가 아닌 것은?
+                            ① Program counter	② Data register
+                            ③ Address register	④ Data count register
+                        31. 컴퓨터에서 사용된ㄴ associative 기억 장치의 특징이 아닌 것은?
+                            ① 가격이 고가이다.
+                            ② 컴퓨터의 처리 성능을 향상시킨다.
+                            ③ 가상기억장치, 캐시기억장치의 주소변환 테이블에 사용된다.
+                            ④ 기억장치 내에 있는 주소를 이용하여 데이터를 직렬로 찾으므로 속도가 빠르다.
+                        32. 데이터 단위가 8비트인 메모리에서 용량이 64KB일 때 어드레스 핀의 개수는?
+                            ① 12개		② 14개
+                            ③ 16개		④ 18개
+                        33. 그림과 같은 8Bit로 구성된 2주소 명령어 구조의 컴퓨터에서 명령어가 21(16)일 때의 니모닉 명령어로 적합한 것은?
+                            
+                            ① Sub AX, BX	② Add AX, CX
+                            ③ Sub BX, CX	④ ADD AX, DX
+                        34. 하드웨어 신호에 의하여 특정 번지의 서브루틴을 수행하는 것은?
+                            ① handshaking mode		② vectored interrupt
+                            ③ DMA			④ subroutine call
+                        35. 10진수 0.1875를 8진수로 변환하면?
+                            ① 0.10		② 0.14
+                            ③ 0.18		④ 0.21
+                        36. 다음 조합 논리회로의 명칭으로 옳은 것은?(단, 입력 변수는 A, B, 출력 변수는 X, Y 이다.)
+                            
+                            ① 전가산기		② 반가산기
+                            ③ 전감산기		④ 반감산기
+                        37. 중앙처리장치는 4가지 단계를 반복적으로 거치면서 동작을 수행하게 되는데 이에 속하지 않는 것은?
+                            ① Fetch Cycle	② Execute Cycle
+                            ③ Indirect Cycle	④ Branch Cycle
+                        38. 응용프로그램이 단일 프로세서 시스템에서 실행되어 완료되기까지 10초가 소용되었다. 같은 응용프로그램이 4개의 프로세서로 구성된 SMP(Symmetric Multiprocessing) 시스템에서 실행하여 완료되기까지 5초가 소요되었다면 속도 향상 지수(Speed-up Factor)는?
+                            ① 0.5		② 1
+                            ③ 2			④ 8
+                        39. 다음 마이크로오퍼레이션을 수행하였을 때 계산되는 수식은?(단, 니모닉 명령어늬 덧셈은 ADD, 뺄셈은 SUB, 곱셈은 MPY, 나눗셈은 DIV로, 이동은 MOVE로 정의한다.)
+                            
+                            ① (A+B)/(C-D+E)	② (A-B)/(C-D+E)
+                            ③ (A-B)/(C+D*E)	④ (A+B)/(C+D*E)
+                        40. 캐시 교체 알고리즘에서 최근에 가장 적게 사용된 페이지들을 교체하는 방법은?
+                            ① FIFO		② LRU
+                            ③ NRU		④ Random
+                        
+                        
+                        3과목 : 운영체제
+                        
+                        41. 교착상태 해결 방안으로 발생 가능성을 인정하고 교착상태가 발생하려고 할 때, 교착상태 가능성을 피해가는 방법은?
+                            ① 예방(Prevention)	② 발견(Detection)
+                            ③ 회피(Avoidance)	④ 복구(Recovery)
+                        42. 파일 보호 기법 중 다음 설명에 해당하는 것은?
+                            
+                            ① Cryptography	② Password
+                            ③ Naming		④ Access control
+                        43. 가상기억장치 구현에서 세그먼테이션(Segmentation) 기법의 설명으로 옳지 않은 것은?
+                            ① 주소 변환을 위해서 페이지 맵 테이블(Page Map Table)이 필요하다.
+                            ② 세그먼테이션은 프로그램을 여러 개의 블록으로 나누어 수행한다.
+                            ③ 각 세그먼트는 고유한 이름과 크기를 갖는다.
+                            ④ 기억장치 보호 키가 필요하다.
+                        44. 주기억장치 배치 전략 기법으로 First Fit 방법을 사용할 경우, 다음과 같은 기억장소 리스트에서 10K 크기의 작접은 어느 영역에 할당되는가?(단, 탐색은 위에서 아래로 한다.)
+                            
+                            ① A			② C
+                            ③ E			④ F
+                        45. 현재 헤드 위치가 53에 있고 트랙 0번 방향으로 이동 중이다. 요청 대기 큐에는 다음과 같은 순서의 액세스 요청이 대기 중일 때 SSTF 스케줄링 알고리즘을 사용한다면 헤드의 총 이동거리는 얼마인가?
+                            
+                            ① 202		② 236
+                            ③ 256		④ 320
+                        46. 로드(Loader)의 종류 중 별도의 로더 없이 언어번역 프로그램이 로더의 기능까지 수행하며, 연결 기능은 수행하지 않고 할당, 재배치, 적재 작업을 모두 언어번역 프로그램이 담당하는 것은?
+                            ① Relocating Loader	② Dynamic Loading Loader
+                            ③ Absolute Loader	④ Compile And Go Loader
+                        47. 3개의 페이지 프레임(Frame)을 가진 기억장치에서 페이지 요청을 다음과 같은 페이지 번호 순으로 요청했을 때 교체 알고리즘으로 FIFO 방법을 사용한다면 몇 번의 페이지 부재(Fault)가 발생하는가?(단, 현재 기억장치는 모두 비어 있다고 가정한다.)
+                            
+                            ① 7번		② 8번
+                            ③ 9번		④ 10번
+                        48. 분산 운영체제의 구조 중 완전 연결(Fully Connection)에 대한 설명으로 옳지 않은 것은?
+                            ① 모든 사이트는 시스템 안의 다른 모든 사이트와 직접 연결된다.
+                            ② 사이트들 간의 메시지 전달이 매우 빠르다.
+                            ③ 기본 비용이 적게 든다.
+                            ④ 사이트 간의 연결은 여러 회선이 존재하므로 신뢰성이 높다.
+                        49. 분산 운영체제에서 사용자가 원하는 파일이나 데이터베이스, 프린터 등의 자원들이 지역 컴퓨터 또는 네트워크 내의 다른 원격지 컴퓨터에 존재하더라도 위치에 관계없이 그의 사용을 보장하는 개념은?
+                            ① 위치 투명성		② 접근 투명성
+                            ③ 복사 투명성		④ 접근 독립성
+                        50. 운영체제의 목적으로 거리가 먼 것은?
+                            ① 신뢰도 향상	② 응답시간 단축
+                            ③ 반환시간 감소	④ 처리량 감소
+                        51. RR(Round-Robin) 스케줄링에 대한 설명으로 옳지 않은 것은?
+                            ① 우선 순위 계산식은 "(대기시간+서비스시간)/서비스시간" 이다.
+                            ② "Time Sharing System 을 위해 고안된 방식이다.
+                            ③ 시간 할당이 커지면 FCFS 스케줄링과 같은 효과를 얻을 수 있다.
+                            ④ 시간 할당이 작아지면 프로세스 문맥 교환이 자주 일어난다.
+                        52. UNIX에서 파일의 사용 허가를 지정하는 명령은?
+                            ① CP		② cat
+                            ③ chmod		④ ls
+                        53. 다중 처리기 운영체제 형태 중 주/종(master/slave) 시스템에 대한 설명으로 옳지 않은 것은?
+                            ① 주 프로세서와 종 프로세서 모두 운영체제를 수행한다.
+                            ② 비대칭 구조를 갖는다.
+                            ③ 주프로세서는 입출력과 연산을 담당하고 종프로세서는 연산만 담당하다.
+                            ④ 주프로세서가 고장 나면 시스템전체가 다운된다.
+                        54. 파일 시스템에 대한 설명으로 옳지 않은 것은?
+                            ① 사용자가 파일을 생성하고 수정하며 제거할 수 있도록 한다.
+                            ② 한 파일을 여러 사용자가 공동으로 사용할 수 있도록 한다.
+                            ③ 사용자가 적합한 구조로 파일을 구성할 수 없도록 제한한다.
+                            ④ 사용자가 보조기억장치 사이에서 인터페이스를 제공한다.
+                        55. UNIX 시스템에서 명령어 해독의 기능을 수행하는 것은?
+                            ① Pipe		② Utility Program
+                            ③ Kernel		④ Shell
+                        56. 시분할 시스템(Time Sharing System)에 대한 설명으로 옳지 않은 것은?
+                            ① 대화식 처리가 가능하다.
+                            ② 시분할 시스템에 사용되는 처리기를 Time Slice 라고 한다.
+                            ③ 실제로 많은 사용자들이 하나의 컴퓨터를 공유하고 있지만 마치 자신만의 컴퓨터 시스템을 독점하여 사용하고 있는 것처럼 느끼게 된다.
+                            ④ H/W를 보다 능률적으로 사용할 수 있는 시스템이다.
+                        57. 사이클이 허용되고, 불필요한 파일제거를 위해 참조카운터가 필요한 디렉토리 구조는?
+                            ① 1단계 디렉토리 구조
+                            ② 2단계 디렉토리 구조
+                            ③ 트리 디렉토리 구조
+                            ④ 일반 그래프형 디렉토리 구조
+                        58. HRN 방식으로 스케줄링 할 경우 입력된 작업이 다음과 같을 때 우선순위가 가장 높은 것은?
+                            
+                            ① A			② B
+                            ③ C			④ D
+                        59. 스레드(Thread)에 대한 설명으로 거리가 먼 것은?
+                            ① 하나의 스레드는 상태를 줄인 경량 프로세스라고도 한다.
+                            ② 하나의 프로세스에는 하나의 스레드만 존재한다.
+                            ③ 프로세스 내부에 포함되는 스레드는 공통적으로 접근 가능한 기억장치를 통해 효율적으로 통신한다.
+                            ④ 스레드를 사용하면 하드웨어, 운영체제의 성능과 응용 프로그램의 처리율을 향상시킬 수 있다.
+                        60. UNIX이 특징으로 옳지 않은 것은?
+                            ① 트리 구조의 파일 시스템을 갖는다.
+                            ② 대화식 운영체제이다.
+                            ③ 이식성이 높으며, 장치, 프로세스 간의 호환성이 높다.
+                            ④ Multi-Tasking은 지원하지만 Multi-User는 지원하지 않는다.
+                        
+                        
+                        4과목 : 소프트웨어 공학
+                        
+                        61. 한 모듈내의 각 구성 요소들이 공통의 목적을 달성하기 위하여 서로 얼마나 관련이 있는지의 기능적 연관의 정도를 나타내는 것은?
+                            ① cohesion		② coupling
+                            ③ structure		④ unity
+                        62. 소프트웨어 재공학 활동 중 기존 소프트웨어를 다른 운영체제나 하드웨어 환경에서 사용할 수 있도록 변환하는 작업은?
+                            ① restructuring	② reverse engineering
+                            ③ analysis		④ migration
+                        63. 소프트웨어 위기 발생 요인과 거리가 먼 것은?
+                            ① 소프트웨어 생산성 향상
+                            ② 소프트웨어 특징에 대한 이해 부족
+                            ③ 소프트웨어 관리의 부재
+                            ④ 소프트웨어 품질의 미흡
+                        64. 소프트웨어 품질 목표 중 사용자의 요구 기능을 충족시키는 정도를 의미하는 것은?
+                            ① Reliability		② Portability
+                            ③ Correctness	④ Efficiency
+                        65. 시스템의 구성 요수 중 입력된 데이터를 처리방법과 조건에 따라 처리하는 것을 의미하는 것은?
+                            ① Process		② Control
+                            ③ Output		④ FeedBack
+                        66. 객체 지향 기법에서 하나 이상의 유사한 객체들을 묶어서 하나의 공통된 특성을 표현한 것을 무엇이라고 하는가?
+                            ① 함수		② 메소드
+                            ③ 메시지		④ 클래스
+                        67. 유지보수의 종류 중 소프트웨어 수명 기간 중에 발생하는 하드웨어, 운영체제 등 환경의 변화를 기존의 소프트웨어에 반영하기 위하여 수행하는 것은?
+                            ① Preventive Maintenance
+                            ② Perfective Maintenance
+                            ③ Corrective Maintenance
+                            ④ Adaptive Maintenance
+                        68. 검증(Validation) 검사 기법 중 개발자의 장소에서 사용자가 개발자 앞에서 행해지며, 오류와 사용상의 문제점을 사용자와 개발자가 함께 확인하면서 검사하는 기법은?
+                            ① 디버깅 검사	② 형상 검사
+                            ③ 베타 검사		④ 알파 검사
+                        69. 객체지향 시스템에서 자료부분과 연산(또는 함수) 부분 등 정보처리에 필요한 기능을 한 테두리고 묶는 것을 무엇이라고 하는가?
+                            ① 정보 은닉(information hiding)
+                            ② 클래스(class)
+                            ③ 캡슐화(encapsulation)
+                            ④ 통합(integration)
+                        70. 정형 기술 검토(FTR)의 지침 사항으로 거리가 먼 것은?
+                            ① 사전에 작성한 메모들을 공유한다.
+                            ② 논쟁이나 반박을 제한하지 않는다.
+                            ③ 의제를 제한한다.
+                            ④ 참가자의 수를 제한한다.
+                        71. 프로젝트 계획 수립시 소프트웨어 범위(Scope) 결정의 주요 요소로 거리가 먼 것은?
+                            ① 소프트웨어 개발 환경	② 소프트에어 성능
+                            ③ 소프트에어 제약조건		④ 소프트에어 신뢰도
+                        72. 바람직한 모듈의 설계 지침이 아닌 것은?
+                            ① 유지보수가 용이해야 한다.
+                            ② 가능한 모듈을 독립적으로 생성하고 결합도를 최대화 한다.
+                            ③ 복잡도와 중복성을 줄이고 일관성을 유지시킨다.
+                            ④ 모듈의 기능은 지나치게 제한적이어서는 안된다.
+                        73. 자료 흐름도의 요소 중 다음 설명에 해당하는 것은?
+                            
+                            ① Process		② data store
+                            ③ data flow		④ terminator
+                        74. 제어흐름 그래프가 다음과 같을 때 McCabe의 cyelomatic 수는 얼마인가?
+                            
+                            ① 3			② 4
+                            ③ 5			④ 6
+                        75. 화이트 박스 검사 기법에 해당하는 것으로만 짝지어진 것은?
+                            
+                            ① ㄱ, ㄴ		② ㄱ, ㄹ, ㅁ, ㅂ
+                            ③ ㄴ, ㄹ, ㅁ, ㅂ	④ ㄷ, ㄹ, ㅁ, ㅂ
+                        76. 소프트웨어 재사용과 관련하여 객체들의 모임, 대규모 재사용 단위로 정의되는 것은?
+                            ① Sheet		② Component
+                            ③ Framework		④ Cell
+                        77. CPM(Critical Path Method)에 대한 설명으로 옳지 않은 것은?
+                            ① CPM 네트워크는 노드와 간선으로 구성된 네트워크이다.
+                            ② CPM 네트워크는 프로젝트 완성에 필요한 작업을 나열하고, 작업에 필요한 소요기간을 예측하는데 사용된다.
+                            ③ CPM 네트워크에서 작업의 선후 관계를 파악되지 않아도 무관하다.
+                            ④ CPM 네트워크를 효과적으로 사용하기 위해서는 필요한 시간을 정확히 예측해야 한다.
+                        78. 럼바우의 분석 기법에서 다음 설명에 해당하는 것은?
+                            
+                            ① 기능 모델링	② 동적 모델링
+                            ③ 객체 모델링	④ 정적 모델링
+                        79. 브룩스(Brooks)의 법칙에 해당하는 것은?
+                            ① 소프트웨어 개발 인력은 초기에 많이 투입하고 후기에 점차 감소시켜야 한다.
+                            ② 소프트웨어 개발 노력은 40 - 20 - 40 으로 해야 한다.
+                            ③ 소프트웨어 개발은 소수의 정예요원으로 시작한 후 점차 증원해야 한다.
+                            ④ 소프트웨어 개발 일정이 지연된다고 해서 말기에 새로운 인원을 투입하면 일정은 더욱 지연된다.
+                        80. CASE(Computer Aided Software Engineering)에 대한 설명으로 옳지 않은 것은?
+                            ① 소프트웨어 모듈의 재사용성을 봉쇄하여 개발 비용을 절감할 수 있다.
+                            ② 소프트웨어 품질과 일관선을 효율적으로 관리할 수 있다.
+                            ③ 소프트웨어 생명 주기으 ㅣ모든 단계를 연결시켜 주고 자동화시켜 준다.
+                            ④ 소프트웨어의 유지보수를 용이하게 수행할 수 있도록 해준다.
+                        
+                        
+                        5과목 : 데이터 통신
+                        
+                        81. 비동기 전송에 대한 설명으로 틀린 것은?
+                            ① 어떤 문자도 전송되지 않을 때는 통신 회선은 예비(Reserve) 상태가 된다.
+                            ② 한 문자를 전송할 때마다 동기화시킨다.
+                            ③ 각 비트 블록의 앞뒤에 각각 시작과 정지비트를 덧붙여 전송한다.
+                            ④ 일반적으로 패리티비트를 추가해서 전송한다.
+                        82. 다음 중 데이터 링크 제어 프로토콜과 이를 제정한 국제기구가 옳게 연결된 것은?
+                            ① HDLC - ISO	② LLC - IETF
+                            ③ PPP - ITU		④ LAPB - IEEE
+                        83. 인터넷 프로토콜로 사용되는 TCP/IP의 계층화 모델 중 Transport 계층에서 사용되는 프로토콜은?
+                            ① FTP		② IP
+                            ③ ICMP		④ UDP
+                        84. 디지털 데이터를 아날로그 신로로 부호화(encoding) 하는 방식은?
+                            ① PSK		② NRZ
+                            ③ FM		④ PM
+                        85. 다음 설명에 해당하는 오류 검출 기법은?
+                            
+                            ① Parity Check	② Cyclic Redundancy Check
+                            ③ Hamming Coding	④ Block Sum Check
+                        86. 문자 동기 전송방식에서 데이터 투명서(Data Transparent)을 위해 삽입되는 제어문자는?
+                            ① ETX		② STX
+                            ③ DLE		④ SYN
+                        87. 슬라이딩 윈도우(Sliding window) 제어방식에 대한 설명으로 옳지 않은 것은?
+                            ① X.25 패킷 레벨의 프로토콜에서도 사용되고 있으며, 수신 통지를 이용하여 송신 데이터의 양을 조절하는 방식이다.
+                            ② 송신측과 수신측 실체(entity)간에 호출설정시 연속적으로 송신 가능한 데이터 단위의 최대치를 절충하는 방식이다.
+                            ③ 수신측으로부터의 수신통지에 의해 윈도우는 이동하고 새로운 데이터 단위의 송신이 가능하다.
+                            ④ 하나의 데이터 블록을 전송한 후 응답이 올때까지 다음 데이터 블록을 전송하지 않고 대기하는 방식이다.
+                        88. 다음이 설명하고 있는 라우팅 프로토콜은?
+                            
+                            ① BGP		② RIP
+                            ③ OSPF		④ EGP
+                        89. HDLC 프레임 중 전송되는 정보프레임에 대한 흐름 제어와 오류 제어를를 위해 사용되는 것은?
+                            ① Information Frame		② Unnumbered Frame
+                            ③ Supervisory Frame		④ Reset Frame
+                        90. 다음 설명에 해당하는 OSI 7계층은?
+                            
+                            ① 물리계층		② 전송계층
+                            ③ 응용계층		④ 네트워크계층
+                        91. IP 프로토콜에서는 오류 보고와 오류 수정 기능, 호스트와 관리 질의를 위한 메커니즘이 없기 때문에 이를 보완하기 위해 설계된 것은?
+                            ① SMTP		② TFTP
+                            ③ SNMP		④ ICMP
+                        92. HDLC 프레임의 시작과 끝을 정의하는 것은?
+                            ① 플래그		② 주소 영역
+                            ③ 제어 영역		④ 정보 영역
+                        93. 데이터 통신 회선의 이용방식에 의한 분류에 포함되지 않는 것은?
+                            ① simplex communication
+                            ② half duplex communication
+                            ③ full duplex communication
+                            ④ multi access communication
+                        94. TCP 프로토콜을 사용하는 응용 계층의 서비스가 아닌 것은?
+                            ① SNMP		② FTP
+                            ③ Telnet		④ HTTP
+                        95. PAP(Password Authentication Protocol) 패킷과 CHAP(Challenge Handshake Authentication Protocol) 패킷은 PPP 프레임의 어느 필드 값에 의해 구별되는가?
+                            ① 주소		② 제어
+                            ③ 프로토콜		④ 검사함
+                        96. 다음과 같은 기능을 가지고 있는 프로토콜은?
+                            
+                            ① RTCP		② RTP
+                            ③ UDP		④ TCP
+                        97. 다음이 설명하는 프로토콜은?
+                            
+                            ① ATM		② TCP/IP
+                            ③ UDP		④ .X.25
+                        98. 여러 제어에 사용되는 자동반복 요청(ARQ) 기법이 아닌 것은?
+                            ① stop-and-wait ARQ		② go-back-N ARQ
+                            ③ auto-repeat ARQ		④ selective-repeat ARQ
+                        99. 다음이 설명하고 있는 것은?
+                            
+                            ① ITU-T		② ISO
+                            ③ IEEE		④ ANSI
+                        100. 다음 그림과 같은 전송 방식으로 옳은 것은?
+                            
+                            ① 문자 위주 동기방식		② 비트지향형 동기방식
+                            ③ 조보식 동기방식		④ 프레임 동기방식
+                 
+                        </textarea>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <input type="submit" style=" position: absolute; right: 530px;"  class="btn btn-primary pull-right" value="글쓰기">
+          </form>
+        </div>
+      </div>
+    </fieldset>
+
+  </form>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script src="js/bootstrap.min.js"></script>
+  <button  style=" position: absolute; right: 550px; top: 400px;" onclick="location.href='/'">취소</button>
+</article>
+<article>
+    <img style="top:100px;" id="centerad" src="images/notice2.png">
+ </article> 
+</body>
+<footer style="top:800px; position: absolute" >
+  <div id="copyright" >
+  Copyright (c) 2018 MY OWN WWW(LSH) Inc. All rights reserved
+  </div>
+  <br/><br/>
+  <div id="SNS">
+     <a href="http://facebook.com" > 
+     <img src="images/facebook.png" height="32" alt="Facebook">
+     </a>
+     <a href="http://twitter.com" > 
+     <img src="images/twitter.png" height="32" alt="Twitter">
+     </a>
+     <a href="http://plus.google.com" > 
+     <img src="images/googleplus-icon.png" height="32" alt="Google Plus">
+     </a>
+     <br/><br/><br/>
+  </div>
+  </footer>
+
+</html>
